@@ -10,8 +10,8 @@ cp web_flask/__init__.py web_dynamic
 cp web_flask/100-hbnb.py web_dynamic
 
 # Rename 
-mv web_dynamic/100-hbnb.py 0-hbnb.py
-mv web_dynamic/100-hbnb.html 0-hbnb.html
+mv web_dynamic/100-hbnb.py web_dynamic/0-hbnb.py
+mv web_dynamic/100-hbnb.html web_dynamic/0-hbnb.html
 
 # update 0-hbnb.py replace existing route to /0-hbnb/
 # will be done outside this function
