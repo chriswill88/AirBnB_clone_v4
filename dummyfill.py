@@ -17,8 +17,8 @@ user_ids = []
 amens = ['wifi', 'anti-wifi', 'double-wifi', 'peticide', 'pesticide']
 amen_ids = []
 
-places = ['room', 'other-room', 'suite', 'all-of-hawaii']
-place_descriptions = ['a-room', 'something-something,-something.', 'placeplaceplace,-window,-door,-wifi,-etc.']
+places = ['room', 'other-room', 'suite', 'all-of-hawaii', 'hotel', 'motel', 'cardboard-box', 'piece-of-heaven', 'hole-in-the-ground', 'mancave']
+place_descriptions = ['a-room', 'something-something,-something.', 'placeplaceplace,-window,-door,-wifi,-etc.', 'no-place', 'nice-place', 'awful-place', 'the-best-ever', 'dont-go-here']
 place_room_no = [3, 5, 1, 0]
 place_bath_no = [4, 5, 12, 9]
 place_guest = [1, 0, 2, 3, 4]
@@ -27,13 +27,13 @@ latitudes = [1, 23423, 12343, 1234]
 longitudes = [4567, 2341, 3234, 902]
 place_ids = []
 
-cities = ['Boston', 'Rhode-Island', 'NYC', 'Bozeman']
+cities = ['Boston', 'Rhode-Island', 'NYC', 'Bozeman', 'Montanaville', 'Montana-City', 'Billings', 'Red-Lodge', 'Hartford', 'Alaska-City', 'Las-Vegas']
 city_ids = []
 
 states = ['Montana', 'Canada', 'South-Dakota', 'North-Dakota', 'Wyoming', 'Oregon', 'Idaho']
 state_ids = []
 
-review_text = ['Weve-all-been-there.-Youve-read-a-great-book,-you-want-to-leave-a-review-and-support-the-author…-but-what-to-say?-Thats-where-the-random-reviews-generator-comes-in.-Below-you-will-find-a-randomly-generated-review-that-any-author-would-be-delighted-to-receive!-Simply-copy-and-paste-it-and-voila!-Dont-think-the-review-is-quite-right?-Refresh-the-page-and-another-will-appear.', 'This-book-was-an-absolute-pleasure-to-read.-It-was-just-one-of-those-stories-thats-pretty-relatable.', 'This-was-a-lovely-romance.-The-main-protagonists-and-secondary-characters-are-complex-and-fun-and-the-story-was-really-touching.-I-cant-wait-to-read-more-from-this-author.']
+review_text = ['Weve-all-been-there-Youve-read-a-great-book-you-want-to-leave-a-review-and-support-the-author-but-what-to-say-Thats-where-the-random-reviews-generator-comes-in-Below-you-will-find-a-randomly-generated-review-that-any-author-would-be-delighted-to-receive-Simply-copy-and-paste-it-and-voila-Dont-think-the-review-is-quite-right-Refresh-the-page-and-another-will-appear', 'This-book-was-an-absolute-pleasure-to-read-It-was-just-one-of-those-stories-thats-pretty-relatable', 'This-was-a-lovely-romance-The-main-protagonists-and-secondary-characters-are-complex-and-fun-and-the-story-was-really-touching-I-cant-wait-to-read-more-from-this-author']
 
 def createUser(email, password, first_name, last_name):
     string = 'create User email="'+email+'" password="'+password+'" first_name="'+first_name+'" last_name="'+last_name+'"'
@@ -58,26 +58,26 @@ def r(x):
     return random.choice(x)
 
 print("Amenities")
-for x in range(0, 6):
-    a = createAmenity(r(amens))
+for x in amens:
+    a = createAmenity(x)
     print(a)
     amen_ids.append(a)
 
 print("States")
-for x in range(0, 4):
-    s = createState(r(states))
+for x in states:
+    s = createState(x)
     print(s)
     state_ids.append(s)
 
 print("Cites")
-for x in range(0, 5):
-    c = createCity(r(state_ids), r(cities))
+for x in cities:
+    c = createCity(r(state_ids), x)
     print(c)
     city_ids.append(c)
 
 print("Users")
-for x in range(0, 3):
-    u = createUser(r(emails), r(passwords), r(first_names), r(last_names))
+for x in first_names:
+    u = createUser(r(emails), r(passwords), x, r(last_names))
     print(u)
     user_ids.append(u)
 
