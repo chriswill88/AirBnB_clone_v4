@@ -17,8 +17,8 @@ user_ids = []
 amens = ['wifi', 'anti-wifi', 'double-wifi', 'peticide', 'pesticide']
 amen_ids = []
 
-places = ['room', 'other room', 'suite', 'all of hawaii']
-place_descriptions = ['a room', 'something something, something.', 'placeplaceplace, window, door, wifi, etc.']
+places = ['room', 'other-room', 'suite', 'all-of-hawaii']
+place_descriptions = ['a-room', 'something-something,-something.', 'placeplaceplace,-window,-door,-wifi,-etc.']
 place_room_no = [3, 5, 1, 0]
 place_bath_no = [4, 5, 12, 9]
 place_guest = [1, 0, 2, 3, 4]
@@ -27,13 +27,13 @@ latitudes = [1, 23423, 12343, 1234]
 longitudes = [4567, 2341, 3234, 902]
 place_ids = []
 
-cities = ['Boston', 'Rhode Island', 'NYC', 'Bozeman']
+cities = ['Boston', 'Rhode-Island', 'NYC', 'Bozeman']
 city_ids = []
 
-states = ['Montana', 'Canada', 'South Dakota', 'North Dakota', 'Wyoming', 'Oregon', 'Idaho']
+states = ['Montana', 'Canada', 'South-Dakota', 'North-Dakota', 'Wyoming', 'Oregon', 'Idaho']
 state_ids = []
 
-review_text = ['Weve all been there. Youve read a great book, you want to leave a review and support the author… but what to say? Thats where the random reviews generator comes in. Below you will find a randomly generated review that any author would be delighted to receive! Simply copy and paste it and voila! Dont think the review is quite right? Refresh the page and another will appear.', 'This book was an absolute pleasure to read. It was just one of those stories thats pretty relatable.', 'This was a lovely romance. The main protagonists and secondary characters are complex and fun and the story was really touching. I cant wait to read more from this author.']
+review_text = ['Weve-all-been-there.-Youve-read-a-great-book,-you-want-to-leave-a-review-and-support-the-author…-but-what-to-say?-Thats-where-the-random-reviews-generator-comes-in.-Below-you-will-find-a-randomly-generated-review-that-any-author-would-be-delighted-to-receive!-Simply-copy-and-paste-it-and-voila!-Dont-think-the-review-is-quite-right?-Refresh-the-page-and-another-will-appear.', 'This-book-was-an-absolute-pleasure-to-read.-It-was-just-one-of-those-stories-thats-pretty-relatable.', 'This-was-a-lovely-romance.-The-main-protagonists-and-secondary-characters-are-complex-and-fun-and-the-story-was-really-touching.-I-cant-wait-to-read-more-from-this-author.']
 
 def createUser(email, password, first_name, last_name):
     string = 'create User email="'+email+'" password="'+password+'" first_name="'+first_name+'" last_name="'+last_name+'"'
