@@ -14,7 +14,7 @@ emails = ['s.com', 'a.net', 'q.gov']
 passwords = ['x', 'y', 'password123', 'baseball']
 user_ids = []
 
-amens = ['wifi', 'anti-wifi', 'double-wifi', 'peticide', 'pesticide']
+amens = ['24-hour-check-in', 'Air-conditioning', 'Breakfast', 'Buzzer_wireless-intercom', 'Cable-TV', 'Carbon-monoxide-detector', 'Cats', 'Dogs', 'Doorman']
 amen_ids = []
 
 places = ['room', 'other-room', 'suite', 'all-of-hawaii', 'hotel', 'motel', 'cardboard-box', 'piece-of-heaven', 'hole-in-the-ground', 'mancave']
