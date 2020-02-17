@@ -91,3 +91,26 @@ print("Reviews")
 for x in range(0, 20):
     r2 = createReview(r(review_text), r(place_ids), r(user_ids))
     print(r2)
+
+print()
+statements = []
+for x in range(0, 3):
+    for amen in amen_ids:
+        place = r(place_ids)
+        #insert into `place_amenity` (place_id, amenity_id) VALUES ('dfddea4a-6440-4710-bc5e-daa3b7813a48', '246d02f8-13cb-4cec-b97c-8d0bffbf1cda');
+        statement = 'INSERT INTO `place_amenity` (place_id, amenity_id) VALUES ' +"('"+ place +"'"+ ', ' +"'"+ amen +"')"+ ';'
+        statements.append(statement)
+        print(statement)
+
+print("set of statements")
+statements = set(statements)
+statements = list(statements)
+statements.append('USE hbnb_dev_db;')
+statements.reverse()
+for x in statements:
+    print(x)
+
+with open("place_amen_dump.sql", 'w') as f:
+    f.write("\n".join(statements) + "\n")
+
+
