@@ -12,3 +12,9 @@ header {
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
 }
+.unavailable {
+	background-color: #CCCCCC;
+}
+.available {
+	background-color: #FF545F;
+}
