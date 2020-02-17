@@ -1,8 +1,8 @@
-let amens = [];
-function updateAmens () {
-  amens = [];
-  $('INPUT:checked').each((x) => amens.append(x.data-id));
-}
 window.addEventListener('DOMContentLoaded', function () {
-  $('INPUT').click(updateAmens);
+  $.get('../api/v1/status/', function (x) {
+    if (JSON.parse(x).status === 'OK'){
+      $('#api_status').addClass('available');
+      $('#api_status').removeClass('unavailable');
+    }
+  });
 });

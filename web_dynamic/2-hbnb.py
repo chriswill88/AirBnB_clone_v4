@@ -4,6 +4,8 @@ Flask App that integrates with AirBnB static HTML Template
 """
 import uuid
 from flask import Flask, render_template, url_for
+from flask import redirect
+import requests
 from models import storage
 
 
@@ -45,6 +47,9 @@ def hbnb_filters(the_id=None):
                            users=users,
                            cache_id=cache_id)  # added cache id
 
+@app.route('/api/<path:therest>')
+def redir(therest):
+    return requests.get("http://0.0.0.0:5001/api/" + therest).text
 
 if __name__ == "__main__":
     """
