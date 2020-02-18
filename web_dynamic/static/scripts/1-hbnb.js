@@ -1,6 +1,7 @@
 window.onload = function () {
   $('.amenities .checkbox').css('margin-left', '10px');
   $('.amenities').css('width', 'auto');
+  $('.amenities').css('whi')
 
   let checkedList = function () {
     let amens_id = [];
