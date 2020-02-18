@@ -27,7 +27,7 @@ def teardown_db(exception):
     storage.close()
 
 
-@app.route('/100-hbnb/')
+@app.route('/101-hbnb/')
 def hbnb_filters(the_id=None):
     """
     handles request to custom template with states, cities & amentities
@@ -41,12 +41,13 @@ def hbnb_filters(the_id=None):
     # added cache_id
     cache_id = str(uuid.uuid4())
 
-    return render_template('100-hbnb.html',
+    return render_template('101-hbnb.html',
                            states=states,
                            amens=amens,
                            places=places,
                            users=users,
                            cache_id=cache_id)  # added cache id
+
 
 @app.route('/api/<path:therest>', methods=['POST', 'GET'])
 def redir(therest):
@@ -60,6 +61,7 @@ def redir(therest):
         return requests.post("http://0.0.0.0:5001/api/" + therest,
                              data=data,
                              headers=head).text
+
 
 if __name__ == "__main__":
     """
